@@ -1,13 +1,8 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/luyihappy/The-final-project-of-python-course/HEAD)
-[![CC BY 4.0][cc-by-shield]][cc-by]
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/luyihappy/BERN02_challenge_project/blob/main/retention_time.ipynb)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
-[cc-by]: http://creativecommons.org/licenses/by/4.0/
-[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
 
-# The final project of python course: Temperature Regression
-
-Our group's final project.
-
+# The final project of BERN02: Modelling with dimension reduction guided by Lasso regression in predicting the molecular retention time in liquid chromatography
 
 
 
@@ -16,33 +11,32 @@ Our group's final project.
 Description of the directory layout.
 
 - `README.md` This is the file you're viewing right now.
-- `environment.yml` Defines the required Python packages using conda. Try to pin to specific major versions of your
-  dependencies as their behavior may change in the future.
-  The environment is currently called `my_environment` and you'll likely want to rename it to something less generic.
-- `temperature_data.csv` This is the data from which we make the regression analysis.
-- `The_final_project_Temperature_Regression.ipynb`  This is the jupyter notebook document of the temperature regression.
+- `image folder` This folder has saved an image that shows why the non-retained compounds should be dropped from the dataset.
+- `SMRT_ECFP_1024_Fingerprints.zip` This is input variables dataset.
+- `SMRT_data.csv` This is target variables dataset.
+- `retention_time.ipynb`  This is the jupyter notebook document of the retention time regression.
+- `requirements.txt`  This is the document that records the version of libraries in python.
   
-
+## Environments
+- Python： 3.13.0
+- Environment manager: venv
 
 ## Requirements
 
-To run the Notebooks online, click on the _Launch Binder_ badge above. Alternatively, to run on your own computer,
-install Python using _e.g._ [Miniforge](https://github.com/conda-forge/miniforge) or [Anaconda](https://docs.conda.io)
-and make sure all required packages are loaded by issuing the following terminal commands
+To run the Notebooks online, click on the _Open in Colab_ badge above. Alternatively, to run on your own computer, create a virtual environment
+and use python version  3.13.0 as the environment. The required Python libraries and their versions are listed in requirements.txt.
 
 ``` bash
-conda env create -f environment.yml
-source activate my_environment
-jupyter-lab
+python -3.13.0 -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
 ```
 
 
 ## Risk assessment
 
-The code might not be usable in the future package breaking. The method to solve this problem is to set the code running environment according to the respective versions given in the file 'environment.yml'.
+The code might not be usable in the future package breaking. The method to solve this problem is to set the code running environment according to the respective versions given in the file 'requirements.txt'.
 
-## Motivation
 
-The python version in the 'environment.yml' is specified to the minor version which ensures the compatibility.
 
 
